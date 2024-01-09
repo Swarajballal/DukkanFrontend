@@ -16,8 +16,8 @@ import { CiWallet } from "react-icons/ci";
 
 const SideBar = () => {
   return (
-    <div className='w-1/6 h-screen bg-[#1E2640]'>
-        <div className='flex flex-col grow w-full'>
+    <div className='w-1/6 h-auto bg-[#1E2640] dark:bg-gray-950 md:block hidden'>
+        <div className='flex flex-col w-full h-full'>
             <div className='flex p-5 gap-4'>
                 <img src="logo.png" alt="logo" className='w-12 rounded'/>
                 <div className='flex-col flex'>
@@ -29,7 +29,7 @@ const SideBar = () => {
                 <FaChevronDown className='text-white self-center text-xl ml-10'/>
             </div>
 
-            <ul className="ml-3 flex flex-col mr-2">
+            <ul className="flex flex-col flex-grow ml-3 mr-2 ">
                 <li className="hover:underline decoration-slate-400 hover:bg-slate-700 rounded">
                     <a href="#" className='flex p-5 gap-4'>
                         <GoHome className='text-white self-center text-xl'/>
@@ -112,16 +112,16 @@ const SideBar = () => {
                         <HiOutlineBolt className='text-white self-center text-xl'/>
                         <span className='text-white text-sm self-center'>Plugins</span>
                     </a>
-                </li>
+                </li>                
             </ul>
 
-            <div className='flex p-2 mb-2 gap-4 bottom-1 fixed bg-slate-700 ml-3 w-[15%]'>
+            <div className='flex p-2 m-4 gap-4 bg-slate-700 dark:bg-slate-900 w-[90%] mx-auto rounded-md items-end hover:bg-slate-900 hover:dark:bg-slate-600 hover:cursor-pointer'>
                 <div className="shadow-[inset_-12px_-8px_40px_#46464620] bg-slate-600 p-1">
                     <CiWallet className='text-white self-center text-4xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]'/>
                 </div>
                 <div className="flex flex-col">
-                    <span className='text-sm self-center text-slate-300'>Available credits</span>
-                    <span className="text-white text-sm self-center font-bold">222.10</span>
+                    <span className='text-sm self-center text-slate-300 hover:underline'>Available credits</span>
+                    <span className="text-white text-sm self-start font-semibold hover:underline">222.10</span>
                 </div>
             </div>
 
